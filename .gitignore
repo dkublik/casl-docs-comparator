@@ -25,3 +25,9 @@ nbdist/
 .nb-gradle/
 
 /out/
+<<<<<<< HEAD
+
+.DS_Store
+
+=======
+>>>>>>> abca863... initial commit
