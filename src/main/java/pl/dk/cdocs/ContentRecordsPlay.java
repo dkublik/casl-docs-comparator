@@ -1,4 +1,4 @@
-package pl.dk.mongoplay;
+package pl.dk.cdocs;
 
 import com.mongodb.client.MongoCursor;
 import org.apache.commons.csv.CSVFormat;
@@ -6,7 +6,7 @@ import org.apache.commons.csv.CSVRecord;
 import org.bson.Document;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
-import pl.dk.mongoplay.repo.ContentRecords;
+import pl.dk.cdocs.repo.ContentRecords;
 
 import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
@@ -26,7 +26,7 @@ class ContentRecordsPlay {
 
     @PostConstruct
     void postConstruct() throws Exception {
-        Reader artistsReader = //new FileReader("selection_of_artist_mtv_de.csv");
+        Reader artistsReader =
                 new BufferedReader(new InputStreamReader(
                         this.getClass().getResourceAsStream("/" + "selection_of_artist_mtv_de.csv")));
         Iterable<CSVRecord> records = CSVFormat.EXCEL.withDelimiter(';').parse(artistsReader);

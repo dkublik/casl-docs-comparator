@@ -1,4 +1,4 @@
-package pl.dk.mongoplay.repo;
+package pl.dk.cdocs.repo;
 
 import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;
@@ -14,7 +14,6 @@ import javax.annotation.PreDestroy;
 import java.util.UUID;
 
 import static com.mongodb.client.model.Filters.eq;
-import static com.mongodb.client.model.Filters.or;
 
 @Service
 public class ContentRecords {

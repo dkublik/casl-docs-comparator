@@ -1,4 +1,4 @@
-package pl.dk.mongoplay.compare;
+package pl.dk.cdocs.compare;
 
 import java.util.List;
 

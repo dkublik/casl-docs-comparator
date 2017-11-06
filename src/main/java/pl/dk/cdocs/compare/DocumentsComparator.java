@@ -1,4 +1,4 @@
-package pl.dk.mongoplay.compare;
+package pl.dk.cdocs.compare;
 
 import org.bson.Document;
 import org.springframework.stereotype.Service;
@@ -9,10 +9,10 @@ import java.util.Objects;
 import java.util.Set;
 
 import static java.util.stream.Collectors.toSet;
-import static pl.dk.mongoplay.util.AnsiColors.ANSI_CYAN;
-import static pl.dk.mongoplay.util.AnsiColors.ANSI_GREEN;
-import static pl.dk.mongoplay.util.AnsiColors.ANSI_PURPLE;
-import static pl.dk.mongoplay.util.AnsiColors.ANSI_RESET;
+import static pl.dk.cdocs.util.AnsiColors.ANSI_CYAN;
+import static pl.dk.cdocs.util.AnsiColors.ANSI_GREEN;
+import static pl.dk.cdocs.util.AnsiColors.ANSI_PURPLE;
+import static pl.dk.cdocs.util.AnsiColors.ANSI_RESET;
 
 @Service
 class DocumentsComparator {

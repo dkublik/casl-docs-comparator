@@ -1,4 +1,4 @@
-package pl.dk.mongoplay.util;
+package pl.dk.cdocs.util;
 
 public class AnsiColors {
 

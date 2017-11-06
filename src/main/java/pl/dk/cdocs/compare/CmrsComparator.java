@@ -1,8 +1,8 @@
-package pl.dk.mongoplay.compare;
+package pl.dk.cdocs.compare;
 
 import org.bson.Document;
 import org.springframework.stereotype.Service;
-import pl.dk.mongoplay.repo.ContentRecords;
+import pl.dk.cdocs.repo.ContentRecords;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,10 +10,10 @@ import java.util.Set;
 import java.util.UUID;
 
 import static java.util.stream.Collectors.toSet;
-import static pl.dk.mongoplay.util.AnsiColors.ANSI_CYAN;
-import static pl.dk.mongoplay.util.AnsiColors.ANSI_GREEN;
-import static pl.dk.mongoplay.util.AnsiColors.ANSI_PURPLE;
-import static pl.dk.mongoplay.util.AnsiColors.ANSI_RESET;
+import static pl.dk.cdocs.util.AnsiColors.ANSI_CYAN;
+import static pl.dk.cdocs.util.AnsiColors.ANSI_GREEN;
+import static pl.dk.cdocs.util.AnsiColors.ANSI_PURPLE;
+import static pl.dk.cdocs.util.AnsiColors.ANSI_RESET;
 
 @Service
 class CmrsComparator {

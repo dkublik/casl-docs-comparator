@@ -1,4 +1,4 @@
-package pl.dk.mongoplay.compare
+package pl.dk.cdocs.compare
 
 import com.mongodb.client.FindIterable
 import org.springframework.beans.factory.annotation.Autowired
@@ -6,8 +6,8 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.context.web.WebAppConfiguration
-import pl.dk.mongoplay.MongoPlayApp
-import pl.dk.mongoplay.repo.ContentRecords
+import pl.dk.cdocs.MongoPlayApp
+import pl.dk.cdocs.repo.ContentRecords
 import spock.lang.Specification
 import spock.lang.Subject
 
