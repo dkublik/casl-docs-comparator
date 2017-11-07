@@ -6,14 +6,14 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.context.web.WebAppConfiguration
-import pl.dk.cdocs.MongoPlayApp
+import pl.dk.cdocs.CaslDocComparatorApp
 import pl.dk.cdocs.repo.ContentRecords
 import spock.lang.Specification
 import spock.lang.Subject
 
 import javax.swing.text.Document
 
-@ContextConfiguration(classes = [MongoPlayApp])
+@ContextConfiguration(classes = [CaslDocComparatorApp])
 @ActiveProfiles("test")
 @WebAppConfiguration
 @SpringBootTest

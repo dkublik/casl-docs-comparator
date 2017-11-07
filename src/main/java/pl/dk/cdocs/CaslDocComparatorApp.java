@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MongoPlayApp {
+public class CaslDocComparatorApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(MongoPlayApp.class, args);
+        SpringApplication.run(CaslDocComparatorApp.class, args);
     }
 
 }
