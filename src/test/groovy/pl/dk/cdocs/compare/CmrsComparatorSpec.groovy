@@ -9,6 +9,8 @@ import pl.dk.cdocs.CaslDocComparatorApp
 import spock.lang.Specification
 import spock.lang.Subject
 
+import static java.util.UUID.fromString
+
 @ContextConfiguration(classes = [CaslDocComparatorApp])
 @ActiveProfiles("test")
 @WebAppConfiguration
@@ -21,7 +23,7 @@ class CmrsComparatorSpec extends Specification {
 
     def "should compare cmrs"() {
         when:
-            cmrsComparator.compare(UUID.fromString('ca276db0-2c07-11e3-8a73-0026b9414f30'))
+            cmrsComparator.compare(fromString('ca276db0-2c07-11e3-8a73-0026b9414f30'))
 
         then:
             noExceptionThrown()

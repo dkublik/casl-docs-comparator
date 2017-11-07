@@ -34,9 +34,9 @@ class ContentRecordsPlay {
             UUID personId = UUID.fromString(record.get(0));
             UUID personContextId = UUID.fromString(record.get(2));
 
-            MongoCursor<Document> documents = contentRecords.findByLinks(personId).iterator();
+            MongoCursor<Document> personContexts = contentRecords.findByLinksAndContentType(personId, "Standard:PersonContext").iterator();
 
-            System.out.println("-- " + personId + ": " + size(documents) + ", cmrs: " + size( contentRecords.findCmrs(personContextId).iterator()));
+            System.out.println("-- " + personId + " pcs: " + size(personContexts) + ", cmrs: " + size(contentRecords.findCmrs(personContextId).iterator()));
         }
 
     }

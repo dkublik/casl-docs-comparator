@@ -13,7 +13,12 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.util.UUID;
 
+import static com.mongodb.client.model.Filters.and;
 import static com.mongodb.client.model.Filters.eq;
+import static pl.dk.cdocs.model.DocumentProperties.CONTENT_TYPE;
+import static pl.dk.cdocs.model.DocumentProperties.ID;
+import static pl.dk.cdocs.model.DocumentProperties.LINKS;
+import static pl.dk.cdocs.model.DocumentProperties.MASTER_LINK;
 
 @Service
 public class ContentRecords {
@@ -49,16 +54,24 @@ public class ContentRecords {
 
 
     public Document findContent(UUID id) {
-        return contentRecords().find(eq("_id", id))
+        return contentRecords().find(eq(ID, id))
                 .first();
     }
 
     public FindIterable<Document> findByLinks(UUID id) {
-        return contentRecords().find(eq("_links", id));
+        return contentRecords().find(eq(LINKS, id));
+    }
+
+    public FindIterable<Document> findByLinksAndContentType(UUID id, String contentType) {
+        return contentRecords().find(
+                and(
+                    eq(CONTENT_TYPE, contentType),
+                    eq(LINKS, id)
+                ));
     }
 
     public FindIterable<Document> findCmrs(UUID id) {
-        return contentRecords().find(eq("MasterLink", id));
+        return contentRecords().find(eq(MASTER_LINK, id));
     }
 
 

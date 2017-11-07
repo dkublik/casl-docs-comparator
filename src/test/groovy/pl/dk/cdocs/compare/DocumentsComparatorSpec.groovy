@@ -13,6 +13,9 @@ import spock.lang.Subject
 
 import javax.swing.text.Document
 
+import static java.util.UUID.fromString
+import static pl.dk.cdocs.model.ContentTypes.PERSON_CONTEXT
+
 @ContextConfiguration(classes = [CaslDocComparatorApp])
 @ActiveProfiles("test")
 @WebAppConfiguration
@@ -28,7 +31,7 @@ class DocumentsComparatorSpec extends Specification {
 
     def "should compare documents"() {
           given:
-              FindIterable<Document> documents = contentRecords.findByLinks(UUID.fromString('39ca49c4-5fd2-11e2-8963-0026b9414f30'))
+              FindIterable<Document> documents = contentRecords.findByLinksAndContentType(fromString('d9c01b92-dcdc-11e3-9765-0026b9414f30'), PERSON_CONTEXT)
 
           when:
               documentsComparator.compare(documents)
